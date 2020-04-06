@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        var express = require('express');
+    
+    var app = express();
+
+    app.use(express.static(_dirname + '/server-exercises'));
+
+    app.get('/ping', function(req,res,) {
+        res.send('Pong')
+    })
+
+    app.listen(3000, function(){
+        console.log('server is listening...')
+    })
+
+    </script>
+    
+</body>
+</html>
